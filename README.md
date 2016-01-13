@@ -1,26 +1,16 @@
-# CodingChallenge
+﻿# CodingChallenge
 
-# puzzle
+Consider a "word" as any sequence of capital letters A-Z (not limited to just "dictionary words"). For any word with at least two different letters, there are other words composed of the same letters but in a different order (for instance, STATIONARILY/ANTIROYALIST, which happen to both be dictionary words; for our purposes "AAIILNORSTTY" is also a "word" composed of the same letters as these two).
 
-Great puzzle! I enjoyed working on it, but I wasn’t able to meet all the requirements.
+We can then assign a number to every word, based on where it falls in an alphabetically sorted list of all words made up of the same set of letters. One way to do this would be to generate the entire list of words and find the desired one, but this would be slow if the word is long.
 
-Maybe I’m missing something, but there seems to be a conflict between the requirement that the program accept up to 25 letters and the constraint that the answer fit into a 64-bit integer. It seems to me that the highest possible rank of a word is the factorial of the word’s length. Therefore, the highest possible ranking of a word 25 letters in length is the factorial of 25. The maximum word length whose factorial will fit into a 64-bit integer is 20. The factorial of 21 requires a BigInteger (C#).
+Write a program which takes a word as a command line argument and prints to standard output its number. Do not use the method above of generating the entire list. Your program should be able to accept any word 25 letters or less in length (possibly with some letters repeated), and should use no more than 1 GB of memory and take no more than 500 milliseconds to run. Any answer we check will fit in a 64-bit integer.
 
-Factorial of 20 (fits into a long)
-2,432,902,008,176,640,000
+Sample words, with their rank:
+ABAB = 2
+AAAB = 1
+BAAA = 4
+QUESTION = 24572
+BOOKKEEPER = 10743
 
-Factorial of 21 (requires a BigInteger)
-51,090,942,171,709,440,000
-
-Factorial of 25 (requires a BigInteger)
-15,511,210,043,330,985,984,000,000
-
-Anyway, the program I wrote should work for words up to 20 letters in length. To run the program, execute /bin/Debug/CodingChallenge.exe at the windows command line.
-
-You’ll need to change the attachment file extension from “pdf” to “zip”. Your mail server apparently blocks zip files.
-
-Password for zip file: stack47overflow
-
-Regards,
-Greg
-
+Your program will be judged on how fast it runs and how clearly the code is written. We will be running your program as well as reading the source code, so anything you can do to make this process easier would be appreciated.
