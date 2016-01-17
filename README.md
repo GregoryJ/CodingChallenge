@@ -12,5 +12,5 @@ AAAB = 1
 BAAA = 4
 QUESTION = 24572
 BOOKKEEPER = 10743
-
+ 
 Your program will be judged on how fast it runs and how clearly the code is written. We will be running your program as well as reading the source code, so anything you can do to make this process easier would be appreciated.
